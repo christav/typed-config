@@ -1,0 +1,51 @@
+{
+  "name": "typed-config",
+  "version": "1.0.0",
+  "description": "Type-safe configuration for Typescript projects",
+  "main": "./dist/index.js",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "tslint": "tslint --project tsconfig.tslint-all.json",
+    "build": "npm run tslint && npm run build:typescript",
+    "build:typescript": "tsc",
+    "test:typescript": "mocha --require ts-node/register --require source-map-support/register --recursive ./test/**/*-test.[tj]s",
+    "test:coverage": "nyc mocha --require ts-node/register --require source-map-support/register --recursive ./test/**/*-test.[tj]s",
+    "test": "npm run clean && npm run tslint && npm run build:typescript && npm run test:typescript"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.43",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "nyc": "^11.2.1",
+    "rimraf": "^2.6.2",
+    "source-map-support": "^0.5.0",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.8.0",
+    "tslint-eslint-rules": "^4.1.1",
+    "tslint-language-service": "^0.9.6",
+    "tslint-microsoft-contrib": "^5.0.1",
+    "tslint-no-unused-expression-chai": "0.0.3",
+    "typescript": "^2.7.2"
+  },
+  "dependencies": {
+    "@types/config": "0.0.33"
+  },
+  "peerDependencies": {
+    "config": "1.*"
+  },
+  "types": "./dist/index.d.ts",
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".js"
+    ],
+    "exclude": [
+      "dist/**/*",
+      "**/*.d.ts"
+    ],
+    "all": true
+  }
+}

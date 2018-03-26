@@ -1,0 +1,130 @@
+{
+    "extends": [
+      "tslint-eslint-rules"
+    ],
+    "jsRules": {
+      "no-unused-expression": false,
+      "no-var-keyword": true,
+      "semicolon": [true, "always"]
+    },
+    "rules": {
+      "arrow-parens": true,
+      "arrow-return-shorthand": true,
+      "ban": [true,
+        ["_","assign"],
+        ["_","concat"],
+        ["_","extend"],
+        ["_","isNull"],
+        ["_", "isDefined"]
+      ],
+      "class-name": true,
+      "curly": true,
+      "eofline": true,
+      "import-spacing": true,
+      "indent": [true, "spaces"],
+      "label-position": true,
+      "no-angle-bracket-type-assertion": true,
+      "no-arg": true,
+      "no-consecutive-blank-lines": true,
+      "no-construct": true,
+      "no-debugger": true,
+      "no-duplicate-variable": true,
+      "no-empty": true,
+      "no-floating-promises": [true, "Bluebird", "SequelizePromise"],
+      "no-shadowed-variable": false, // Not sure if it makes sense
+      "no-trailing-whitespace": true,
+      "no-unnecessary-initializer": true,
+      "no-unsafe-finally": true,
+      "no-unused-expression-chai": true,
+      "no-use-before-declare": true,
+      "no-var-keyword": true,
+      "no-require-imports": true,
+      "object-curly-spacing": [true, "always"],
+      "object-literal-key-quotes": [true, "as-needed"],
+      "one-line": [true,
+        "check-open-brace",
+        "check-catch",
+        "check-else",
+        "check-whitespace"
+      ],
+      "prefer-const": true,
+      "prefer-for-of": true,
+      "quotemark": [true, "single", "avoid-escape"],
+      "radix": true,
+      "semicolon": [true, "always"],
+      "space-before-function-paren": [true, {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always",
+        "method": "never",
+        "constructor": "never"
+      }],
+      "space-within-parens": 0,
+      "triple-equals": [true, "allow-null-check"],
+      "typedef-whitespace": [true, {
+        "callSignature": "noSpace",
+        "catchClause": "noSpace",
+        "indexSignature": "space",
+        "property-declaration": "noSpace",
+        "variable-declaration": "noSpace"
+      },
+      {
+        "call-signature": "onespace",
+        "index-signature": "onespace",
+        "parameter": "onespace",
+        "property-declaration": "onespace",
+        "variable-declaration": "onespace"
+      }],
+      "variable-name": [
+        false,
+        "allow-pascal-case",
+        "ban-keywords",
+        "check-format"
+      ],
+      "whitespace": [true,
+        "check-branch",
+        "check-decl",
+        "check-operator",
+        "check-module",
+        "check-preblock",
+        "check-rest-spread",
+        "check-separator",
+        "check-type",
+        "check-type-operator",
+        "check-typecast"
+      ],
+  
+      //tslint-microsoft-contrib rules
+      "no-unnecessary-semicolons": true,
+      "prefer-array-literal": true,
+  
+      /**
+      * Security Rules. The following rules should be turned on because they find security issues
+      * or are recommended in the Microsoft Secure Development Lifecycle (SDL)
+      */
+      "insecure-random": true,
+      "no-banned-terms": true,
+      "no-cookies": true,
+      "no-delete-expression": true,
+      "no-disable-auto-sanitization": true,
+      "no-document-domain": true,
+      "no-document-write": true,
+      "no-eval": true,
+      "no-exec-script": true,
+      "no-function-constructor-with-string-args": true,
+      "no-http-string": [true, "http://www.example.com/?.*", "http://www.examples.com/?.*"],
+      "no-inner-html": true,
+      "no-octal-literal": true,
+      "no-reserved-keywords": false, // Disabled because we use a lot of the keywords as function names
+      "no-string-based-set-immediate": true,
+      "no-string-based-set-interval": true,
+      "no-string-based-set-timeout": true,
+      "non-literal-require": true,
+      "possible-timing-attack": true
+    },
+    "rulesDirectory": [
+      "tslint-microsoft-contrib",
+      "tslint-no-unused-expression-chai"
+    ]
+  }
+  
