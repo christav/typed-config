@@ -2,6 +2,12 @@
   "name": "typed-config",
   "version": "1.0.0",
   "description": "Type-safe configuration for Typescript projects",
+  "keywords": [
+    "typescript",
+    "configuration",
+    "typesafe",
+    "decorators"
+  ],
   "main": "./dist/index.js",
   "scripts": {
     "clean": "rimraf ./dist",
