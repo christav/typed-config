@@ -12,8 +12,11 @@
     "test:coverage": "nyc mocha --require ts-node/register --require source-map-support/register --recursive ./test/**/*-test.[tj]s",
     "test": "npm run clean && npm run tslint && npm run build:typescript && npm run test:typescript"
   },
-  "author": "",
-  "license": "UNLICENSED",
+  "author": "Chris Tavares <cct@tavaresstudios.com>",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/christav/typed-config"
+  },
   "devDependencies": {
     "@types/chai": "^4.0.4",
     "@types/mocha": "^2.2.43",
