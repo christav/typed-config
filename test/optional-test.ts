@@ -32,7 +32,7 @@ describe('optional decorator', function () {
         });
 
         const optInfo = configProto[OptionalInfoSymbol][propName] as OptionalInfo;
-        expect(optInfo.predicate({}, config, propName, keyName)).to.be.true;
+        expect(optInfo.predicate({}, propName, keyName, config)).to.be.true;
       });
 
       it('should have predicate that fails if key is not in config source', function () {
@@ -40,7 +40,7 @@ describe('optional decorator', function () {
         });
 
         const optInfo = configProto[OptionalInfoSymbol][propName] as OptionalInfo;
-        expect(optInfo.predicate({}, config, propName, keyName)).to.be.false;
+        expect(optInfo.predicate({}, propName, keyName, config)).to.be.false;
       });
     });
 

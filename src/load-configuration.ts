@@ -24,7 +24,7 @@ export async function loadConfiguration(obj: any, configProvider: ConfigProvider
     let value: any;
 
     const optionalInfo = optionals[info.propertyName] || notOptional;
-    const shouldLoad = optionalInfo.predicate(obj, configProvider, info.propertyName, info.loader.configKey || '');
+    const shouldLoad = optionalInfo.predicate(obj, info.propertyName, info.loader.configKey || '', configProvider);
 
     if (!shouldLoad && optionalInfo.defaultValue !== undefined) {
       value = optionalInfo.defaultValue;

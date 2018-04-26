@@ -44,7 +44,7 @@ export interface PropertyDecorator {
 // Type of optional predicate function.
 //
 export interface OptionalPredicate {
-  (target: any, config?: ConfigProvider, propertyName?: string, keyName?: string): boolean;
+  (target: any, propertyName?: string, keyName?: string, config?: ConfigProvider): boolean;
 }
 
 //

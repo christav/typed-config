@@ -49,6 +49,6 @@ export function optional(...args: any[]): PropertyDecorator {
   }
 }
 
-function checkConfigPredicate(target: any, config: ConfigProvider, propertyName: string, keyName: string): boolean {
+function checkConfigPredicate(target: any, propertyName: string, keyName: string, config: ConfigProvider): boolean {
   return config.has(keyName);
 }
